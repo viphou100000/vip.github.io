@@ -1,0 +1,841 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #f9dcc4;
+            margin: 0;
+            
+        }
+        .container{
+            width: 100%;
+            height: 140px;
+            position: relative;
+        }
+        .logo{
+            width: 200px;
+            height: 50px;
+            background-color:;
+           
+        }
+        .logo img{
+            color:#f77f00;
+            padding-left: 10px;
+            padding-top: 20px;
+            width: 300px;
+            font-size: 40px;
+            margin-left: 10px;
+           
+        }
+        .op{
+            color:black;
+        }
+        .container ul{
+            list-style: none;
+        } 
+        .container ul li{
+            display: block;
+        }
+        .container ul li a {
+            text-decoration: none;
+            float: right;
+            margin: 50px;
+            color:gray;
+            font-size: 25px;
+           margin-top:  -15px;
+           transition: 0.5s;
+        }
+        .container ul li a:hover{
+          color:green;
+          
+        }
+        .active{
+            text-decoration: none;
+            position: relative;
+        }
+        .active::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+
+    bottom: -2px;
+    left: 0;
+    background-color: #f77f00;
+
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+        }
+        .active:hover:after{
+            visibility: visible;
+            transform:scaleX(1);
+        }
+        .b{
+            background-color:#fca311;
+            transition: 0.5s;
+            
+        }
+        .b:hover{
+          background-color: aliceblue;
+        }
+
+      .container  button{
+            float: right;
+            margin: 50px;
+            width: 100px;
+            height: 50px;
+            position: absolute;
+            border-radius: 20px;
+            background-color: #f77f00;
+            color:white;
+      right:0px;
+      top: 0;
+      margin-left: -100px;
+      border: none;
+      cursor: pointer;
+      transition: 0.5s;
+           
+        }
+        .container button:hover{
+            background-color:whitesmoke ;
+            color:#f77f00;
+        }
+        .container2{
+            width: 100%;
+            height: 1000px;
+            background-color:;
+        }
+        .boxr{
+            width: 700px;
+            height: 400px;
+           
+            float: left;
+            margin-right: 200px;
+            
+        }
+        .boxr button{
+            width: 100px;
+            height: 40px;
+            background-color: #f77f00;
+            color:white;
+            border-radius: 20px;
+            border:none;
+            margin-left : 40px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+            color:whitesmoke;
+            
+
+        }
+        a:hover{
+            color:#fca311;
+        }
+        .boxr button:hover{
+            background-color: whitesmoke;
+            color: #f77f00;
+        }
+        .boxr h1{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 80px;
+            padding-left: 40px  ;
+            padding-right: 30px;
+            animation: slide-in 1s forwards;
+        }
+        .slide-in {
+			position: relative;
+			opacity: 0;
+			animation: slide-in 1s forwards;
+        }
+        @keyframes slide-in {
+			from {
+				left: -100%;
+				opacity: 0;
+			}
+			to {
+				left: 0;
+				opacity: 1;
+			}
+		}
+
+        .boxr p{
+            padding-left: 40px;
+            padding-top: -20px;
+        }
+        .boxr2{
+            width: 650px;
+            height: 600px;
+            background-color:;
+            float: left;
+           margin-left: 200px;
+           margin-top: -50px;
+        }
+        .boxr2 img{
+           margin-bottom: 20px;
+           width: 900;
+           margin-left:-200px;
+           margin-top: -50px;
+            animation: float 3s linear infinite ;
+        }
+        @keyframes float{
+        0%,100%{
+            transform: translate(0rem);
+        }   
+            50%{
+   transform: translateY(3rem);
+            }
+       }
+       
+        .cart_container{
+            width: 85%;
+            height: 500px;
+            background-color:#f9dcc4;
+            margin-left: 170px;
+        
+            
+        }
+
+        .cart{
+            width: 300px;
+            height: 300px;
+            background-color: ;
+            box-shadow: 4px 4px 30px gray;
+            margin-right: 500px;
+            border-radius: 20px;
+            position: relative;
+            vertical-align: middle;
+            float: left;
+            border: 3px  dashed #fca311;
+           margin:35.0px ;
+
+        }
+        .imf{
+            position: relative;
+            top:-60px;
+            width: 120px;
+            margin-left:45px ;
+            height: 100px;
+            padding-right: 90px;
+            padding-top: 10px;
+            border-radius: 50%;
+            background-color: whitesmoke;
+            box-shadow: 0px 50px 50px #f77f00;
+            font-family: "Koulen";
+        }
+        .imf img{
+            width: 200px;
+            top: -20px;
+            position: absolute;
+            position: relative;
+
+        }
+        ::-webkit-scrollbar{
+            width: 10px;
+        }
+        ::-webkit-scrollbar-thumb{
+            border-radius: 20px;
+            background-color: #f77f00;
+        }
+        .kk{
+            width:100%;
+            height: 670px;
+            background-color:;
+        }
+        .k2{
+
+            width: 100%;
+            height: 900px;
+            background-color: ;
+            margin-left: 165px;
+        }
+        .imh{
+            width: 260px;
+            margin-top: -180px;
+            margin-right: -10px;
+            animation:float 3s linear infinite ;
+        }
+       @keyframes float{
+        0%,100%{
+            transform: translate(0rem);
+            
+        }   
+            50%{
+   transform: translateY(3rem);
+            }
+       }
+       .container3{
+        width: 100%;
+        height: 250px;
+        background-color:#f9dcc4;
+       }
+       .container4{
+        width: 100%;
+        height: 500px;
+        background-color: rgb(64, 58, 58);
+       }
+       .box1{
+        width: 500px;
+        height: 500px;
+        background-color:;
+        margin-left: 60px;
+        float: left;
+       }
+       .box1 img{
+        width: 300px;
+        margin-left: 100px;
+        margin-bottom: -30px;
+       }
+       .box1 h1{
+        color: #f77f00;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
+       }
+       .box1 p{
+        color:gray;
+        font-size: 30px;
+         margin-top: auto;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       }
+       .box1 ul li {
+        color: palegreen;
+       width:500px;
+        border-radius: 50%;
+       text-align: ;
+       }
+       .under{
+        width: 100%;
+        height:900px;
+        background-color: rgb(64, 58, 58) ;
+        margin-top: -25px;
+       }
+       .under1{
+        width: 1000px;
+        height: 400px;
+        background-color: #f9dcc4;
+        margin-left: 490px;
+        border-radius: 30px;
+        margin-bottom: -10px;
+       }
+       .under1 h1{
+        text-align: center;
+        font-size: 30px;
+        color:#f77f00;
+        margin-bottom: 20px;
+       
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       .under1 button{
+       margin-left:400px ;
+       margin-top: 90px;
+       width: 200px;
+       height: 50px;
+       border-radius: 50px;
+       border: none;
+       font-size: 30px;
+       cursor: pointer;
+       background-color: #fca311;
+       color: whitesmoke;
+       transition: 0.5s;
+       
+       }
+       .under1 button:hover{
+        background-color: aliceblue;
+        color: #f77f00;
+
+       }
+       .media{
+        width: 400px;
+        height: 400px;
+        background-color: ;
+        margin-top: 40px;
+        float: left;
+        margin: 30px;
+       }
+       .b{
+        cursor: pointer;
+       }
+       .media h1{
+        color: #f77f00;
+        font-size: 30px;
+        text-align: center;
+       }
+       .media p{
+        margin-left: 15px;  
+        font-size: 20px;
+        color:grey;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+       }
+       .imy{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: #fca311;
+        margin-left: 10px;
+        float: left;
+        margin:30px;
+       }
+       .imy img{
+        width:52px;
+        border-radius: 50%;
+        margin-right:-80px;
+        margin-left: 4px;
+        
+        margin-top: 12px;
+       }
+       .c{
+        background-color: #fca311;
+        cursor: pointer;
+        transition: 0.5s;
+       }
+       .c:hover{
+        background-color: white;
+
+       }
+       
+       
+        
+
+       
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="pou1.jpg">
+        </div>
+     <ul>
+        <li><a class="active" href="#">Sevice</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a class="active" href="#">home</a></li>
+        <li><a class="active" href="menu.html">Menu</a></li>
+        <li><a class="active" href="us.html">About us</a></li>
+        <li><a class="active" href="#">Info</a></li>
+        
+        <button> <a href="sing.html">Sign in</a></button>
+        
+     </ul>
+    </div>
+    <div class="container2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      
+
+     <div class="boxr">
+        <div class="slide-in">
+  <h1>Order your favourite meal now </h1>
+  </div>
+  <p>Hi there ! The Amazing foods are waiting for you 
+    we always be there with you with delicouse foods </p>
+    <button><a href="food.html">More option</a> </button>
+    
+     </div>
+     <img class="imh" src="super.png">
+     <div class="boxr2">
+         <img src="ham.png">
+           </div>
+    </div>
+    <div class="cart_container">
+        <br>
+        <br>
+    <div class="cart">
+     <div class="imf"><img src="ham.png">
+        <center><h1 style="position: absolute;margin-top: -20px;padding-left: 7px;">Hamburger</h1></center>
+    </div>
+    <p style="padding-left: 50px;" >
+        The Hamburger made of the real beef and the test is very cool.Order right now!</p>
+        <h2 align="center">5.00$</h2>
+        <center> <a href="ham.html"><button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+    </div>
+   
+     
+       
+    <div class="cart">
+        <div class="imf">
+            <img style="width: 190;margin-top: -10px;" src="2.png">
+            <center><h1 style="position: absolute;margin-top: -20px;padding-left: 10px;">Turkish Bread</h1></center>
+       </div>
+       <p style="padding-left: 50px;" > The test of it is geat let's try it!!
+        </p>
+        <h2 align="center">4.00$</h2>
+       <center> <a href="turkish.html"><button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+    </div>
+    <div class="cart">
+        <div class="imf">
+            <img src="1.png">
+            <center><h1 style="position: absolute;margin-top: -20px;margin-left:-10px ;">Chicken Potato </h1></center>
+       </div>
+       <p style="padding-left: 50px;" >Lorem ips
+        expedita accusamus ex aucusamus ex autem c
+        ulpa!</p>
+        <h2 align="center">4.5$</h2>
+        <center><a href="chicken.html"> <button class="b" style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+       
+       <div class="cart">
+        <div class="imf">
+            <img style="width: 220px;margin-left:-20px;" src="sandwich.png">
+            <center><h1 style="position: absolute;margin-top: -20px;padding-left: 30px;">Sandwich</h1></center>
+       </div>
+       <p style="padding-left: 50px;" >Lorem ips
+        expedita accusamus ex aucusamus ex autem c
+        ulpa!</p>
+        <h2 align="center">10$</h2>
+        <center> <a href="sandwich.html"><button class="c"  style="border:none;width: 110px;height: 30px;border-radius: 30px;background-color: #fca311;" >Add to card</button></a></center>
+       </div>
+       
+       <div class="cart">
+        <div class="imf">
+            <img src="chiceken.png">
+            <center><h1 style="position: absolute;margin-top: -20px;padding-left: 20px;">Fry Chicken</h1></center>
+           
+       </div>
+       
+       <br>
+       <p style="padding-left: 80px;" >The Crispy Chicken
+        </p>
+        <h2 align="center">8.50$</h2>
+        <center><a href="fry rice.html"><button  class="b" style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+         
+       <div class="cart">
+        <div class="imf">
+            <br>
+           
+            <img style="margin-top: -20px;" src="3.png">
+            <center><h1 style="position: absolute;margin-top: -10px;margin-left: 20px;">Potato sauce</h1></center>
+       </div>
+       <p style="padding-left: 70px;" >Potato wtih spacial sauce 
+        </p>
+        <h2 align="center">6.00$</h2>
+        <center><a href="potato fran.html"> <button class="b" style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+       <div class="cart">
+        <div class="imf">
+            <img style="width: 110px;margin-top: -25px;margin-left: 30px;" src="potao.png">
+            <center><h1 style="position: absolute;margin-top: -30px;padding-right: 10px;margin-left: 30px;">Fry potato</h1></center>
+          
+    </div>
+       <p style="padding-left: 50px;" >Lorem ips
+        expedita accusamus ex aucusamus ex autem c
+        ulpa!</p>
+        <h2 align="center">2.00$</h2>
+        <center><a href="potato.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+       <div class="cart">
+        <div class="imf">
+            <img style="width: 150px;margin-top: -60px;margin-left: 30px;" src="cookie.png">
+            <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 50px;">Cookies</h1></center>
+          
+       </div>
+       <p style="padding-left: 50px;" >Lorem ips
+        expedita accusamus ex aucusamus ex autem c
+        ulpa!</p>
+        <h2 align="center">2.45$</h2>
+        <center><a href="kookie.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+       <div class="cart">
+        <div class="imf">
+            <img style="width: 150px;margin-top: 10px;margin-left: 15px;" src="noodle.png">
+            <center><h1 style="position: absolute;margin-top: 6px;padding-right: 10px;margin-left: 50px;">Noodle</h1></center>
+          
+       </div>
+       <p style="padding-left: 50px;" >Lorem ips
+        expedita accusamus ex aucusamus ex autem c
+        ulpa!</p>
+        <h2 align="center">3.20$</h2>
+        <center><a href="noodle.html"><button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+       <div class="cart">
+        <div class="imf">
+            <img style="width:150px;margin-top: 20px;margin-left:15px;" src="steak.png">
+            <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 50px;">Steak</h1></center>
+          
+       </div>
+       <p style="padding-left:0px;" >Lorem ips
+        expedita accusamus ex aucusamus ex autem c
+        ulpa!</p>
+        <h2 align="center">5.00$</h2>
+        <center><a href="steak.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+       <div class="cart">
+        <div class="imf">
+            <img style="width: 200px;margin-top: -15px;margin-left: -5px;" src="hot dog.png">
+            <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 50px;">Hot dog</h1></center>
+          
+       </div>
+       <p style="padding-left: 50px;" >Lorem ips
+        expedita accusamus ex aucusamus ex autem c
+        ulpa!</p>
+        <h2 align="center">9.60$</h2>
+        <center><a href="hotdog.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+       </div>
+       <div class="cart">
+        <div class="imf">
+            <img style="width: 150px;margin-top: -8px;margin-left: 15px;" src="Bread.png">
+            <center><h1 style="position: absolute;margin-top: -4px;padding-right: 10px;margin-left: 50px;">Bread</h1></center>
+          
+       </div>
+       <p style="padding-left: 50px;" >Lorem ips
+        expedita accusamus ex aucusamus ex autem c
+        ulpa!</p>
+        <h2 align="center">9.60$</h2>
+        <center><a href="bread.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+       </div>
+      <div class="kk">
+
+      </div>
+    <div class="k2">
+        <div class="cart">
+            <div class="imf">
+                <img style="width: 180px;margin-top: -28px;margin-left: 3px;" src="spicy.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 35px;">Spicybeef</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">5.10$</h2>
+            <center><a href="Spicybeef.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 280px;margin-top: -45px;margin-left: -45px;" src="sachko.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 40px;">Roat beef</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">10$</h2>
+            <center><a href="sachko.html"> <button class="b" style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 250px;margin-top: -12px;margin-left: -35px;" src="we.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: -1px;">Roast Chicken</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">9.00$</h2>
+            <center><a href="sachmon.html"> <button class="b" style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 250px;margin-top: -12px;margin-left: -35px;" src="trey.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 40px;">FishJuicy</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">7.00$</h2>
+            <center><a href="fishjucy.html"><button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <br>
+           <br>
+           <br>
+           <br>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 130px;margin-top: -50px;margin-left: 27px;" src="popcorn.png">
+                <br>
+                <br>
+                <center><h1 style="position: absolute;margin-top: -50px;padding-right: 10px;margin-left: 40px;">Popcorn</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">8.15$</h2>
+            <center><a href="popcorn.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 210px;margin-top: -12px;margin-left:0px;" src="pizza1.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 60px;">Pizza</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">3.80$</h2>
+            <center><a href="pizza.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 200px;margin-top: -50px;margin-left: -15px;" src="banana cake.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 10px;">Banana cake</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">6.20$</h2>
+            <center><a href="bananacake.html"><button class="b" style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 250px;margin-top: -12px;margin-left: -35px;" src="Babecue.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 40px;">Babecue</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">12.00$</h2>
+            <center><a href="babecue.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 250px;margin-top: -12px;margin-left:-14px;" src="Roti.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 55px;">Roti</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">3.50$</h2>
+            <center><a href="Roi.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 180px;margin-top: -50px;margin-left: 20px;" src="curry bread.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 20px;">Curry Bread</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">9.20$</h2>
+            <center><a href="Currybread.html"> <button class="b" style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                <img style="width: 200px;margin-top: -12px;margin-left: -4px;" src="Choco Donut.png">
+                <center><h1 style="position: absolute;margin-top: -20px;padding-right: 10px;margin-left: 58px;">Donut</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ip4expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">7.90$</h2>
+            <center><a href="Donut.html"> <button  class="b" style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+           <div class="cart">
+            <div class="imf">
+                
+                <br>
+                <img style="width: 220px;margin-top: -80px;margin-left: -1px;" src="shushi.png">
+                <center><h1 style="position: absolute;margin-top: -70px;padding-right: 10px;margin-left: 55px;">Shushi</h1></center>
+              
+           </div>
+           <p style="padding-left: 50px;" >Lorem ips
+            expedita accusamus ex aucusamus ex autem c
+            ulpa!</p>
+            <h2 align="center">13.00$</h2>
+            <center><a href="Shushi.html"> <button class="b"  style="border:none;width: 110px;height: 30px;border-radius: 30px;" >Add to card</button></a></center>
+           </div>
+    </div>
+    <div class="container3">
+
+    </div>
+    <div class="container4">
+         <div class="box1">
+           <center><h1>The Delivery </h1></center> 
+           <img src="delivery.png">
+           <center> <p>Fast more than what you think Order now! Come now </p></center>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          
+            
+         </div>
+         <div class="box1">
+            <center><h1>Have a Fun meeting </h1></center> 
+            <img src="family.png">
+            <center><p style="margin-top: 80px;"> To make a great moment with your family </p></center>
+         </div>
+         <div class="box1">
+            <center><h1>Good quality</h1></center> 
+            <img src="com.png">
+            <center> <p style="margin-top: 80px;">Always think about the quality first </p></center>
+         </div>
+    </div>
+   <div class="under">
+<div class="under1">
+    <br>
+    <br>
+    <br>
+    <h1>We make quility every day</h1>
+        <button>Let's talk</button>
+</div>
+<div class="media">
+    <h1>
+        Menu Links<br>
+    </h1>
+    <hr style="background-color: #f77f00;border-radius: 10px;  width:100px; height:4px;border: none;margin-left: -1px;">
+    <p>Home</p><br>
+    <p>About</p><br>
+    <p>Menu</p><br>
+    <p>Service</p><br>
+
+</div>
+<div class="media">
+    <h1>
+        Our service<br>
+    </h1>
+    <hr style="background-color: #f77f00;border-radius: 10px;  width:100px; height:4px;border: none;margin-left: -1px;">
+    <p>Web design</p><br>
+    <p>Web deverloper</p><br>
+    <p>Marketing</p><br>
+    <p>ProductManagerment</p><br>
+</div>
+<div class="media">
+    <h1>
+        Imformation<br>
+    </h1>
+    <hr style="background-color: #f77f00;border-radius: 10px;  width:100px; height:4px;border: none;margin-left: 4px;">
+    <p>About us</p><br>
+    <p>Delivery information</p><br>
+    <p>Private policy</p><br>
+    <p>Term&Condition</p><br>
+</div>  
+<div class="media">
+<h1>Contact us</h1>
+<div class="imy">
+    <img src="insta1.png">
+
+</div>
+<div style="background-color:rgb(63, 52, 52);" class="imy">
+    <img style="margin-top: -3px;" src="facebook2.png">
+</div>
+<div class="imy">
+    <img style="margin-top:3px; width: 50px;" src="tweeter.png">
+</div>
+</div>
+   </div>
+   
+      
+</body>
+</html>
